@@ -12,6 +12,8 @@
   width: 150px;
   background: #191718;
   float: left;
+  height: 100%;
+  position: fixed;
 }
 
 li {
@@ -62,13 +64,11 @@ li:hover {
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 0 120px;
+  padding: 0 129px 0 279px;
   height: 935px;
-  position: relative;
 }
 
 .description {
-  height: 210px;
   align-items: center;
   flex-direction: column;
   display: flex;
@@ -79,6 +79,8 @@ li:hover {
 .logo img {
   width: 310px;
   height: 122px;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .block img {
@@ -112,7 +114,41 @@ li:hover {
   display: flex;
   align-items: flex-start;
   width: 100%;
-  position: absolute;
   bottom: 0;
-  left: 120px;
+  margin-top: 182px;
+}
+
+@media only screen and (max-width: 1023px) {
+  .block {
+    flex-direction: column;
+  }
+
+  .block img {
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-right: 16px;
+  }
+
+  .block-1 {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .sidebar {
+  }
+
+  .content {
+    padding: 0 89px 0 239px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .sidebar {
+    display: none;
+  }
+
+  .content {
+    padding: 0 40px;
+  }
 }
